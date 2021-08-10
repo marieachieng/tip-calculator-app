@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <main>
+      <h1>
+        <img src="images/logo.svg">
+      </h1>
+      <form class="card" id="myForm">
+        <div class="input" >
+          <div class="control">
+            <div class="label">
+              <label>Bill</label>
+            </div>
+            <div class="inp-field">
+              <img src="images/icon-dollar.svg">
+              <input type="input" name="bill" id="inputBill" onkeyup="myFunction()">
+            </div>
+          </div>
+
+          <div class="control">
+            <div class="label">
+              <label>Selet Tip %</label>
+            </div>
+            <div class="btn-wrapper">
+              <select id="inputTip" onchange="myFunction()">
+                <option value="0.05">5</option>
+                <option value="0.1">10</option>
+                <option value="0.15">15</option>
+                <option value="0.25">20</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="control">
+            <div class="label" id="error">
+              <label>Number of People</label>
+              <p id="errorMsg">Can't be zero</p>
+            </div>
+            <div class="inp-field">
+              <img src="images/icon-person.svg">
+              <input type="input" name="tip" id="noOfPle" value="1"onkeyup="myFunction()">
+            </div>
+          </div>
+        </div>
+        <div class="output">
+          <div class="line-wrapper">
+            <div class="title">
+              <p>Tip Amount <span>/ person</span></p>
+            </div>
+            <div class="value">              
+              <h1>$<span id="tipAmount"></span></h1>
+            </div>
+          </div>
+          <div class="line-wrapper">
+            <div class="title">
+              <p>Total Amount <span>/ person</span></p>
+            </div>
+            <div class="value">              
+              <h1>$<span id="totalAmount"></span></h1>
+            </div>
+          </div>
+          <button onclick="myReset()">Reset</button>
+        </div>
+      </form>
+    </main>
+
+    <script type="text/javascript" src="calculate.js"></script>
+  </body>
+</html>
