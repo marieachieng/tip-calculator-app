@@ -12,10 +12,10 @@ function myFunction() {
   	i.style.display = "none";
   }
   	totalTip = function(){
-	  	return ((x*y)/z);
+	  	return ((x*y)/z).toFixed(2);;
   	}
   	totalAmount = function(){
-	  	return (Number(x) + Number(totalTip()));
+	  	return (Number(x) + Number(totalTip())).toFixed(2);;
   	}
   
   document.getElementById("tipAmount").innerHTML = totalTip();
